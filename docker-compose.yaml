@@ -1,0 +1,12 @@
+#mount volume
+#set bot token
+#run command
+
+version: "3.9"
+services: 
+  phpbot:
+    image: php:8.0.2-cli
+    env_file: .env
+    volumes: 
+      - ./:/usr/src/app
+    command: ["php", "/usr/src/app/bot.php"]
